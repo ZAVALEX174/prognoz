@@ -7,12 +7,34 @@ const $locationInput = document.getElementById('form-location-input');
 const $body = document.querySelector('body');
 let currentCard = null;
 
+// модальное окно
+const modal = document.getElementById('modal');
+const closeBtn = document.querySelector('.modal__close-btn');
+
+closeBtn.addEventListener('click', () => {
+    modal.classList.remove('modal_open');
+})
+
 async function getWeatherData(location) {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${APIKEY}&units=metric&lang={ru}`)
 
-    const data = await response.json();
 
-    return data;
+    if (response.ok) { // если HTTP-статус в диапазоне 200-299
+        // получаем тело ответа (см. про этот метод ниже)
+        let data = await response.json();
+        return data;
+    } else {
+
+        if (response.status === 404) {
+            // alert("Ошибка HTTP: " + response.status);
+            modal.classList.add('modal_open');
+        }
+        // alert("Введите корректное название населенного пункта");
+
+    }
+    // const data = await response.json();
+    //
+    // return data;
 }
 
 function getNewCard(title,) {
