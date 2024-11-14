@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app" id="app">
+    <div class="app__container">
+        <!--        верхняя часть-->
+        <div class="app__container-top">
+            <!--форма-->
+            <form action="" class="form-location" id="form-location">
+                <input type="text" class="form-location__input" id="form-location-input" placeholder="Location" required
+                       minlength="2" maxlength="30">
+                <button type="submit" class="form-location__btn" id="form-location__btn">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg class="form-location__icon" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="29px" viewBox="0 0 29 29"
+                         version="1.1">
+                        <g id="surface1">
+                            <path style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:currentColor;stroke-opacity:1;stroke-miterlimit:4;"
+                                  d="M 33.15194 33.001616 L 24.873384 24.726024 M 1.150323 14.792565 C 1.150323 7.176455 7.326239 0.998384 14.944774 0.998384 C 22.563308 0.998384 28.73451 7.176455 28.73451 14.792565 C 28.73451 22.408675 22.563308 28.586746 14.944774 28.586746 C 7.326239 28.586746 1.150323 22.408675 1.150323 14.792565 Z M 1.150323 14.792565 "
+                                  transform="matrix(0.828571,0,0,0.852941,0,0)"/>
+                        </g>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <!--        нижняя часть-->
+        <div class="app__container-bottom" id="cards-box">
+            <!--карточка-->
+
+        </div>
+    </div>
+</div>
+<script type="module" src="app.js" defer></script>
+</body>
+</html>
